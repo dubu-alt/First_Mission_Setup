@@ -400,7 +400,7 @@ Successfully tagged my-web-server:1.0
 
 ```
 [주소 표시줄]
-URL: http://localhost:8000
+URL: http://localhost:8080
 
 ```
 
@@ -411,22 +411,22 @@ URL: http://localhost:8000
 #### 볼륨 생성
 
 ```bash
-$ docker volume create my-data-volume
+$ docker volume create my-nginx-data
 
-my-data-volume
+my-nginx-data
 
 $ docker volume ls
 
 DRIVER    VOLUME NAME
-local     my-data-volume
+local     my-nginx-data
 ```
 
 #### 볼륨 연결하여 컨테이너 실행
 
 ```bash
 $ docker run --name my-server-vol \
-  -p 8080:8000 \
-  -v my-data-volume:/data \
+  -p 8080:80 \
+  -v my-nginx-data:/data
   my-web-server:1.0
 
 🌟 웹 서버 시작됨!
@@ -435,7 +435,7 @@ $ docker run --name my-server-vol \
 #### 컨테이너 내부에서 데이터 생성
 
 ```bash
-$ docker exec -it my-server-vol bash
+$ docker exec -it my-nginx-data-vol sh
 
 root@abc123:/app# echo "중요한 데이터입니다!" > /data/important.txt
 
@@ -443,10 +443,10 @@ root@abc123:/app# cat /data/important.txt
 중요한 데이터입니다!
 
 root@abc123:/app# ls -la /data
-total 12
-drwxr-xr-x 2 root root 4096 Mar 31 11:00 .
-drwxr-xr-x 1 root root 4096 Mar 31 11:00 ..
--rw-r--r-- 1 root root  20 Mar 31 11:00 important.txt
+total 4
+drwxr-xr-x    1 root     root            26 Apr  1 05:54 .
+drwxr-xr-x    1 root     root            40 Apr  1 05:04 ..
+-rw-r--r--    1 root     root            16 Apr  1 05:54 important.txt
 
 root@abc123:/app# exit
 ```
@@ -461,9 +461,9 @@ a9b8c7d6e5f4   my-web-server:1.0   "python3 app.py"  5 min ago   Exited (137)
 #### 컨테이너 삭제
 
 ```bash
-$ docker container rm my-server-vol
+$ docker container rm my-nginx-data-vol
 
-my-server-vol
+my-nginx-data-vol
 
 $ docker ps -a | grep my-server-vol
 (아무것도 출력 안 됨 = 컨테이너 삭제됨)
@@ -483,16 +483,16 @@ local     my-data-volume
 #### 새 컨테이너로 데이터 복구
 
 ```bash
-$ docker run --name my-server-vol2 \
-  -p 8000:8000 \
-  -v my-data-volume:/data \
+docker run --name my-nginx-data-vol-recovery \
+  -p 8001:80 \
+  -v my-nginx-data:/data \
   my-web-server:1.0
 
 🌟 웹 서버 시작됨!
 
 (다른 터미널에서)
 
-$ docker exec -it my-server-vol2 bash
+docker exec -it my-nginx-data-vol-recovery sh
 
 root@def456:/app# cat /data/important.txt
 중요한 데이터입니다!
