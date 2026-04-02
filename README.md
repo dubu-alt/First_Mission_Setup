@@ -876,14 +876,14 @@ fatal: unable to read askpass response
 1. 원격 저장소 URL 확인:
    $ git remote -v
    
-   origin  https://github.com/사용자명/my-dev-workspace.git](https://github.com/dubu-alt/First_Mission_Setup.git 
+   origin https://github.com/dubu-alt/First_Mission_Setup.git 
 
 2. GitHub 계정 로그인 상태 확인
 ```
 
 #### 해결 방법
 
-**방법 1: VS Code GitHub 로그인 (추천)**
+**방법 1: VS Code GitHub 로그인**
 ```
 1. VS Code 좌측 하단 프로필 아이콘 > "Sign in with GitHub"
 2. 브라우저에서 GitHub 계정으로 로그인
@@ -892,18 +892,7 @@ fatal: unable to read askpass response
    $ git push -u origin main
    
 ✅ 해결!
-```
 
-**방법 2: GitHub 개인 액세스 토큰 (PAT) 사용**
-```
-1. GitHub > Settings > Developer settings > Personal access tokens
-2. "Generate new token" 클릭
-3. 권한: repo, write:repo_hook 선택
-4. 토큰 복사 (생성된 후 다시 볼 수 없음!)
-5. Git 푸시 시 비밀번호 대신 토큰 입력
-
-⚠️ 주의: 토큰을 README.md나 코드에 절대 포함하면 안 됨!
-```
 
 ---
 
