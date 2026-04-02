@@ -595,8 +595,8 @@ ghi9012 README.md 작성 완료
 ```bash
 $ git remote -v
 
-origin  https://github.com/사용자명/my-dev-workspace.git (fetch)
-origin  https://github.com/사용자명/my-dev-workspace.git (push)
+origin  https://github.com/dubu-alt/First_Mission_Setup.git (fetch)
+origin  https://github.com/dubu-alt/First_Mission_Setup.git (push)
 ```
 
 ---
@@ -873,7 +873,7 @@ fatal: unable to read askpass response
 1. 원격 저장소 URL 확인:
    $ git remote -v
    
-   origin  https://github.com/사용자명/my-dev-workspace.git
+   origin  https://github.com/사용자명/my-dev-workspace.git](https://github.com/dubu-alt/First_Mission_Setup.git 
 
 2. GitHub 계정 로그인 상태 확인
 ```
@@ -956,7 +956,6 @@ my-dev-workspace/
 - [Git 공식 문서](https://git-scm.com/doc)
 - [Docker 공식 가이드](https://docs.docker.com/)
 - [VS Code Docker 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-- [Python HTTP Server](https://docs.python.org/3/library/http.server.html)
 
 ---
 
