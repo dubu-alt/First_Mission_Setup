@@ -665,7 +665,7 @@ bind: address already in use
 
 Error: failed to start container ...
 ```
-![이미지] <[https://github.com/user-attachments/assets/2b36fd28-1a2f-4200-8b4c-5b10c3731117](https://github.com/user-attachments/assets/09014ef7-3465-4a34-bb55-77398390e681)>
+![이미지] (<https://github.com/user-attachments/assets/2b36fd28-1a2f-4200-8b4c-5b10c3731117](https://github.com/user-attachments/assets/09014ef7-3465-4a34-bb55-77398390e681>)
 
 #### 원인 가설
 - 포트 8000을 이미 다른 컨테이너가 사용 중
