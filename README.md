@@ -28,8 +28,8 @@
 | 파일 권한 실습 | ✅ | chmod 명령으로 권한 변경 테스트 |
 | Docker 설치 및 검증 | ✅ | docker --version, docker info |
 | 기본 컨테이너 실행 | ✅ | hello-world, ubuntu 컨테이너 |
-| 커스텀 웹 서버 구축 | ✅ | Dockerfile, Python 앱 작성 |
-| 포트 매핑 접속 | ✅ | http://localhost:8000 |
+| 커스텀 웹 서버 구축 | ✅ | Dockerfile, 웹 이미지 실행 앱 작성 |
+| 포트 매핑 접속 | ✅ | http://localhost:8080 |
 | 데이터 영속성 검증 | ✅ | Docker 볼륨, 바인드 마운트 |
 | Git & GitHub 연동 | ✅ | 저장소 생성, 커밋, 푸시 |
 
