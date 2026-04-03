@@ -329,8 +329,8 @@ c1f2d3e4f5a6   ubuntu             "bash"               8 minutes ago   Exited (0
 ```bash
 $ docker ps
 
-CONTAINER ID   IMAGE              COMMAND              CREATED        STATUS
-a9b8c7d6e5f4   my-web-server:1.0  "python3 app.py"     5 minutes ago  Up 3 minutes
+CONTAINER ID     IMAGE                 COMMAND                 CREATED        STATUS
+a9b8c7d6e5f4   my-web-server:1.0  "docker-entrypoint.."     5 minutes ago  Up 3 minutes
 ```
 
 ### 4-3) Dockerfile 기반 웹 서버 구축
