@@ -849,7 +849,7 @@ failed to solve with frontend dockerfile.v0
 ```
 1. 현재 위치 확인:
    $ pwd
-   C:\my-dev-workspace
+   workspace
    
    → Dockerfile이 있는 폴더여야 함 ✅
 
@@ -857,7 +857,6 @@ failed to solve with frontend dockerfile.v0
    $ ls
    
    app/
-   Dockerfile
    README.md
    
    → app 폴더가 있나? ✅
@@ -865,34 +864,37 @@ failed to solve with frontend dockerfile.v0
 3. app 폴더 내용 확인:
    $ ls app/
    
-   app.py
+   Dokcerfile
    index.html
    
-   → Python 파일과 HTML이 있나? ✅
+   → Dockerfile이 존재하는가 ✅
 ```
 
 #### 해결 방법
 ```bash
 1. 올바른 위치에서 빌드:
-   $ cd C:\my-dev-workspace
    
    $ docker build -t my-web-server:1.0 .
-   
-   ← 현재 폴더(.)의 Dockerfile 사용
 
-2. 만약 app 폴더가 없으면:
-   $ mkdir app
-   
-   $ echo "Python 코드" > app/app.py
-   
-   $ echo "<html>...</html>" > app/index.html
-   
-   다시 빌드:
-   $ docker build -t my-web-server:1.0 .
-
-3. Dockerfile에서 경로 확인:
-   COPY app/ /app/
-   ↑ 이 경로가 실제로 존재하나?
+[+] Building 2.1s (7/7) FINISHED                                                         docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                     0.0s
+ => => transferring dockerfile: 380B                                                                     0.0s 
+ => [internal] load metadata for docker.io/library/nginx:alpine                                          1.6s 
+ => [auth] library/nginx:pull token for registry-1.docker.io                                             0.0s
+ => [internal] load .dockerignore                                                                        0.0s
+ => => transferring context: 2B                                                                          0.0s 
+ => [1/2] FROM docker.io/library/nginx:alpine@sha256:e7257f1ef28ba17cf7c248cb8ccf6f0c6e0228ab9c315c152f  0.0s 
+ => => resolve docker.io/library/nginx:alpine@sha256:e7257f1ef28ba17cf7c248cb8ccf6f0c6e0228ab9c315c152f  0.0s 
+ => CACHED [2/2] RUN echo "hello world" > /usr/share/nginx/html/index.html                               0.0s 
+ => exporting to image                                                                                   0.2s 
+ => => exporting layers                                                                                  0.0s
+ => => exporting manifest sha256:274b872d2cf65913d2c999af3d33afad4bac1ecd554159be27811471c0467e6a        0.0s 
+ => => exporting config sha256:2d130a3af9d7fa3a8c48bfab873db07111de8e11e7c59c01734ace476ace6bbb          0.0s 
+ => => exporting attestation manifest sha256:e02908f1682a74fe06f5cb448fcb94e79f2b756f75463802115e4192be  0.1s 
+ => => exporting manifest list sha256:4787960b1fe96886b047fff6838fd71115982717baf309925411e403f4d148eb   0.0s 
+ => => naming to docker.io/library/my-web-server:1.0                                                     0.0s 
+ => => unpacking to docker.io/library/my-web-server:1.0 
+ 
 
 ✅ 해결!
 ```
