@@ -75,8 +75,6 @@ Server:
  ...
 ```
 
-```
-
 ---
 
 ## 3. 체크리스트
@@ -154,16 +152,16 @@ Server:
 ## 🔍 4. 검증 방법 및 결과
 
 ### 4-1) 터미널 명령 실습
-- 절대 경로: 최상위 루트 디렉토리(/)부터 시작하는 전체 주소입니다. (예: /home/user/data/help.txt)
-어느 폴더에 있든 항상 똑같은 위치를 가리킵니다.
-- 상대 경로: 현재 내가 위치한 폴더(Current Working Directory)를 기준으로 합니다. (예: ./config.txt 또는 ../data/config.txt)
-내가 어디 있느냐에 따라 가리키는 대상이 달라집니다.
+- 절대 경로: 최상위 루트 디렉토리(/)부터 시작하는 전체 주소 (예: /home/user/data/help.txt)
+어느 폴더에 있든 항상 똑같은 위치를 나타냄
+- 상대 경로: 현재 내가 위치한 폴더(Current Working Directory)를 기준 (예: ./config.txt 또는 ../data/config.txt)
+내가 어디 있느냐에 따라 가리키는 대상이 달라짐
 
 #### 현재 위치 확인
 
 ```bash
 $ pwd
-Users/vnkers948441/desktop/workspace
+Users/vnkers948441/desktop/
 ```
 
 #### 파일 목록 보기 (숨김 파일 포함)
@@ -188,8 +186,10 @@ worksapce
 
 Make Directory의 약어로, 폴더를 생성하는 명령어다.
 
-touch — 파일 생성
+cd workspace
+Users/vnkers948441/desktop/workspace로 이동함
 
+touch — 파일 생성
 root@vnkers948441 ❯ touch bin.txt
 파일을 생성하는 명령어다. `.`을 기준으로 파일명과 확장자를 구분한다.
 
