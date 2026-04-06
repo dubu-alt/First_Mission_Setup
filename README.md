@@ -495,7 +495,7 @@ docker run --name my-server-vol -p 8080:80 -v my-nginx-data:/data my-web-server:
 2026/04/03 02:44:50 [notice] 1#1: start worker process 34
 2026/04/03 02:44:50 [notice] 1#1: start worker process 35
 192.168.215.1 - - [03/Apr/2026:02:45:29 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15" "-"
-🌟 웹 서버 시작됨!
+웹 서버 시작
 ```
 
 ### 볼륨 연결 후 컨테이너 실행하고 난뒤 로컬호스트 실행 이미지
@@ -737,7 +737,7 @@ origin  https://github.com/dubu-alt/First_Mission_Setup.git (push)
 
 ## 5. 트러블슈팅
 
-### 문제 1️⃣: "docker: command not found"
+### 문제 1: "docker: command not found"
 
 #### 문제 상황
 ```
@@ -769,7 +769,7 @@ command not found: docker
    
 3. Docker Desktop 실행
    → 시작 메뉴 > Docker Desktop 검색 > 열기
-   → 작업 표시줄에 고래 아이콘(🐋) 나타날 때까지 대기 (1-2분)
+   → 작업 표시줄에 고래 아이콘 나타날 때까지 대기 (1-2분)
    
 4. VS Code 터미널 재시작
    → Ctrl + Shift + ` (새 터미널)
@@ -781,7 +781,7 @@ command not found: docker
 
 ---
 
-### 문제 2️⃣: "Port 8000 is already allocated"
+### 문제 2: "Port 8000 is already allocated"
 
 #### 문제 상황
 ```
