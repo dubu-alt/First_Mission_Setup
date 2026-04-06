@@ -159,7 +159,7 @@ Server:
 
 ```bash
 $ pwd
-vnkers948441/desktop/workspace
+Users/vnkers948441/desktop/workspace
 ```
 
 #### 파일 목록 보기 (숨김 파일 포함)
@@ -534,6 +534,8 @@ docker run --name my-nginx-data-vol-recovery \
   -p 8001:80 \
   -v my-nginx-data:/data \
   my-web-server:1.0
+
+ 데이터 볼륨을 마운트하는데 호스트에 저장된 my-nginx-data라는 이름의 볼륨을 컨테이너 내부의 /data 디렉토리에 연결
 
  웹 서버 시작
 
